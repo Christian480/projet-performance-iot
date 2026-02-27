@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import plotly.express as px
 
-DATA_DIR = "rule_engine_dataset"
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rule_engine_dataset")
 
 def load_runs(data_dir=DATA_DIR):
     records = []
