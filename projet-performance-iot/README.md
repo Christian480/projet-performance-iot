@@ -35,11 +35,11 @@ Le projet permet de :
 . pip install -r requirements.txt<br>
 . Attends que l'installation se termine complètement.
 
-# LANCER LE DASHBOARD
+## LANCER LE DASHBOARD
 
 python -m streamlit run app.py
 
-## Le navigateur s'ouvre automatiquement sur http://localhost:8501
+### Le navigateur s'ouvre automatiquement sur http://localhost:8501
 
 # CE QU'ON VOIT DANS LE DASHBOARD
 
