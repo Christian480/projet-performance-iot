@@ -1,5 +1,5 @@
 import pandas as pd
-import plotly as px
+import plotly.express as px
 
 def profiling_par_block(df):
     stats = df.groupby(["block_id", "class"])["duration_ms"].agg(mean_ms="mean", max_ms="max", count="count").reset_index()
