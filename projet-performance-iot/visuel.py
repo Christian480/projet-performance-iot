@@ -2,7 +2,6 @@ import json
 import glob
 import os
 import pandas as pd
-import plotly.express as px
 
 DATA_DIR = "rule_engine_dataset"
 
