@@ -35,6 +35,25 @@ with col_l:
 with col_r:
     st.plotly_chart(plot_distribution(df), use_container_width=True)
 
+st.header(" Runs en échec")
+runs_info = df.drop_duplicates("run_id")[["run_id", "graph_id", "status", "total_ms", "timestamp"]]
+runs_erreur = runs_info[runs_info["status"] == "ERROR"]
+runs_timeout = runs_info[runs_info["status"] == "TIMEOUT"]
+
+col_e, col_t = st.columns(2)
+with col_e:
+    st.markdown("###  Runs ERROR (" + str(len(runs_erreur)) + ")")
+    if len(runs_erreur) == 0:
+        st.success("Aucun run ERROR")
+    else:
+        st.dataframe(runs_erreur.reset_index(drop=True), use_container_width=True)
+with col_t:
+    st.markdown("### Runs TIMEOUT (" + str(len(runs_timeout)) + ")")
+    if len(runs_timeout) == 0:
+        st.success("Aucun run TIMEOUT")
+    else:
+        st.dataframe(runs_timeout.reset_index(drop=True), use_container_width=True)
+
 st.header("Timeline d'Exécution")
 run_ids = sorted(df["run_id"].unique())
 selected = st.selectbox("Choisir un run :", run_ids)
