@@ -2,7 +2,7 @@ import json
 import glob
 import os
 import pandas as pd
-import plotly.express as px
+import plotly as px
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "rule_engine_dataset")
 
