@@ -9,7 +9,7 @@ Ce projet analyse les performances d'un moteur de règles IoT. On charge 50 fich
 projet-performance-iot/
 
 ├── rule_engine_dataset/ → les 50 fichiers JSON (run_000.json à run_049.json)<br>
-├── visuel.py → Phase 1 : chargement des JSON + graphiques<br>
+├── data.py → Phase 1 : chargement des JSON + graphiques<br>
 ├── statistique.py → Phase 2 : calcul des statistiques<br>
 ├── timeline.py → graphique Gantt (timeline d'un run)<br>
 ├── app.py → Phase 3 : dashboard Streamlit<br>
