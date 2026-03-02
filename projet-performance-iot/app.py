@@ -1,7 +1,6 @@
 import streamlit as st
 from data import load_runs, plot_timeline, plot_distribution
 from statistics import profiling_par_block, top3_blocs_lents, taux_succes, temps_moyen_total, plot_hotspots
-
 st.set_page_config(page_title="IoT Performance Dashboard", page_icon="", layout="wide")
 st.title("Observabilité IoT — Analyse de Performance")
 
